@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MonoLithiiun Developments | Direct Link</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <script type="module" crossorigin src="/assets/index-BMNhZ_2_.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Bv8rZMyc.css">
+    
+    <link rel="icon" type="image/svg+xml" href="https://euprecisodamatilha-crypto.github.io/favicon.svg" />
+    <script type="module" crossorigin src="https://euprecisodamatilha-crypto.github.io/assets/index-BMNhZ_2_.js"></script>
+    <link rel="stylesheet" crossorigin href="https://euprecisodamatilha-crypto.github.io/assets/index-Bv8rZMyc.css">
     
     <style>
-      /* Backup visual caso o CSS demore a carregar */
+      /* Backup visual pra não ficar tudo preto enquanto carrega */
       body { background-color: #121212; color: #ffffff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
       #root { width: 100%; height: 100%; }
     </style>
@@ -18,21 +19,17 @@
     <div id="root"></div>
     
     <script>
-      /* LÓGICA DE PROTEÇÃO MONOLITHIIUN 
-          Este script roda antes de tudo para garantir a 'malandragem' da URL
-      */
       (function() {
-        // Gera o Hash Aleatório para a URL
+        // Gera o Hash da sua URL de proteção
         const _0xMLHT = Math.random().toString(16).substring(2, 10) + Math.random().toString(16).substring(2, 10);
         const newPath = '/app/' + _0xMLHT;
         
-        // Altera a URL sem dar refresh (Engana o curioso)
-        // No GitHub, precisamos garantir que ele não tente recarregar a página do zero
+        // Aplica a máscara na URL
         if (!window.location.pathname.includes('/app/')) {
           window.history.replaceState(null, '', newPath);
         }
 
-        // Bloqueio de F12 (Simples para não bugar o seu PC)
+        // Bloqueio de F12 pra proteger o trampo
         document.onkeydown = function(e) {
           if(e.keyCode == 123) return false; 
           if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; 
