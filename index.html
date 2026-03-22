@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MonoLithiiun Developments | Direct Link</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <script type="module" crossorigin src="assets/index-BMNhZ_2_.js"></script>
+    <link rel="stylesheet" crossorigin href="assets/index-Bv8rZMyc.css">
+    
+    <style>
+      /* Backup visual caso o CSS demore a carregar */
+      body { background-color: #121212; color: #ffffff; font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+      #root { width: 100%; height: 100%; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <script>
+      /* LÓGICA DE PROTEÇÃO MONOLITHIIUN 
+         Este script roda antes de tudo para garantir a 'malandragem' da URL
+      */
+      (function() {
+        // Gera o Hash Aleatório para a URL
+        const _0xMLHT = Math.random().toString(16).substring(2, 10) + Math.random().toString(16).substring(2, 10);
+        const newPath = '/app/' + _0xMLHT;
+        
+        // Altera a URL sem dar refresh (Engana o curioso)
+        if (!window.location.pathname.includes('/app/')) {
+          window.history.replaceState(null, '', newPath);
+        }
+
+        // Bloqueio de F12 (Simples para não bugar o seu PC)
+        document.onkeydown = function(e) {
+          if(e.keyCode == 123) return false; // Bloqueia F12
+          if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false; // Bloqueia Ctrl+Shift+I
+        };
+        
+        console.log("%c MONOLITHIIUN DEVELOPMENTS %c Acesso Restrito ", "color: #fff; background: #000; padding:5px;", "color: #000; background: #fff; padding:5px;");
+      })();
+    </script>
+  </body>
+</html>
